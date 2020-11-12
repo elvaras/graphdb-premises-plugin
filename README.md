@@ -1,6 +1,6 @@
 # graphdb-premises-plugin
 
-GraphDB Premises Plugin. Can be used to find which statements (premises) can be used to derive a specific statement. This includes:
+Premises Plugin for GraphDB. Can be used to find which statements (premises) can be used to derive a specific statement. This includes:
 - The statement itself, if this is explicitly asserted.
 - The explicit statements (premises) from which the statement is derived through inference. If the statement is derived by chaining several inference rules, all the statements in the chain are provided.
 - All intermediate implicit statements (also considered premises) from which the statement is derived.
