@@ -27,7 +27,7 @@ import org.junit.Test;
 
 import com.ontotext.test.TemporaryLocalFolder;
 import com.ontotext.trree.OwlimSchemaRepository;
-import com.ontotext.trree.plugin.proof.ProofPlugin;
+import com.ontotext.trree.plugin.premises.PremisesPlugin;
 
 public class TestExplainWithProofPlugin {
 	@Rule
@@ -56,7 +56,7 @@ public class TestExplainWithProofPlugin {
 	public void testBasicInference() throws RepositoryException, MalformedQueryException, QueryEvaluationException, RDFParseException, IOException {
 		Map<String, String> params = new HashMap<String, String>();
 		OwlimSchemaRepository sail = new OwlimSchemaRepository();
-		params.put("register-plugins", ProofPlugin.class.getName());
+		params.put("register-plugins", PremisesPlugin.class.getName());
 		sail.setParameters(params);
 		SailRepository rep = new SailRepository(sail);
 		rep.setDataDir(tmpFolder.newFolder("proof-plugin-explain"));
